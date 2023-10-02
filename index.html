@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiaaf - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <img src="img/c_logo.jpg" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Languages</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="first">
+        <div class="leftsection">
+          <div>Hi, I am <i>Tariq</i> and</div>
+          <div>I am a passionate</div>
+          <span id="element"></span>
+          <div class="contact">
+            <button>Contact<span></span></button>
+          </div>
+        </div>
+        <div class="rightsection">
+            <img src="img/main.png">
+        </div>
+      </section>
+      <hr>
+      <section class="second">
+        <h1>Languages</h1>
+        <span>What I have Learnt so far</span>
+        <div class="imgs">
+          <img src="img/python.png">
+          <img src="img/html.png">
+          <img src="img/css.png">
+          <img src="img/js.png">
+        </div>
+        <div class="progress-bars">
+          <progress max="100" value="80"></progress>
+          <progress max="100" value="70"></progress>
+          <progress max="100" value="60"></progress>
+          <progress max="100" value="20"></progress>
+        </div>  
+        <hr class="horizontal">
+        <div class="projects">
+          <h1>Projects</h1>
+          <span>External Links for my projects</span>
+          <div class="update">
+            <h4>We ar still updating the the project</h4>
+            <progress></progress>
+          </div>
+        </div>
+      </section>
+      <section class="third">
+        <h1>Thanks for your time</h1>
+        <h4>still on update...</h4>
+        <progress></progress>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "<i>Software developer...</i>",
+          "<i>Web developer...</i>",
+          "<i>Game Developer...</i>",
+          "<i>Video Editor...</i>",
+          "<i>Web Designer...</i>"
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
