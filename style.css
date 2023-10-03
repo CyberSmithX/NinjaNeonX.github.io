@@ -1,3 +1,24 @@
+@keyframes fade {
+    from {
+      transform: translateY(0%);
+      opacity: 0%;
+    }
+    to {
+      transform: translateY(-15%);
+      opacity: 100%;
+    }
+  }
+@keyframes faderight {
+from {
+    transform: translatex(15%);
+    opacity: 0%;
+}
+to {
+    transform: translatex(0%);
+    opacity: 100%;
+}
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +29,6 @@ body {
   color: white;
 }
 
-@keyframes fade {
-  from {
-    transform: translateY(15%);
-    opacity: 0%;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 100%;
-  }
-}
 .container .navbar {
   display: flex;
   justify-content: space-around;
@@ -49,14 +60,12 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: rgb(0, 106, 255);
+  background-color: #009688;
   transition: 0.5s;
 }
 .navbar ul li:hover::after {
   width: 100%;
 }
-
-/* Right and Left Section */
 .first {
   display: flex;
   color: white;
@@ -82,7 +91,7 @@ body {
   padding: 30px 10px;
 }
 .leftsection i {
-  color: red;
+  color: #009688;
 }
 .leftsection .contact button {
   border-radius: 40px;
@@ -107,61 +116,145 @@ body {
   transition: 0.5s;
 }
 
-.leftsection .contact button:hover span{
+.leftsection .contact button:hover span {
   width: 100%;
 }
 .leftsection .contact button:hover {
   border: none;
 }
+.secondsection {
+    padding: 20px 45px 20px 20px;
+    height: 38rem;
+    display: flex;
 
-.second {
-  max-width: 80vw;
-  margin: 0px 47px;
-  height: 40rem;
-  padding: 38px 40px 20px 0px;
 }
-.horizontal {
+.secondsection .left {
+    flex-basis: 35%;
+    margin: 0 0 0 60px;
+}
+#about_img {
+    height: 30rem;
+    border-radius: 40px;
+    margin: 30px 40px;
+    animation-name: faderight;
+    animation-duration: 0.5s;
+}
+.secondsection .right {
+    flex-basis: 45%;
+    padding: 30px 0;
+    font-size: 18px;
+}
+.right h1 {
+    margin-bottom: 20px;
+    color: none;
+    font-size: 42px;
+}
+.right i {
+    color: #009688;
+    font-size: 20px;
+}
+.right .tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
     position: relative;
-    transform: rotate(90deg);
-    width: 45%;
-    height: 0px;
-    top: 300px;
-    left: 700px;
 }
-.imgs {
-    width: 52px;
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
 }
-.imgs img {
-    height: 4.2rem;
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents span {
+    color: red;
+    font-size: 22px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+.thirdsection {
+    height: 30rem;
+    padding: 30px 40px;
+    margin: 0 20px 30px;
+}
+.thirdsection .wrappers {
     padding: 20px 45px 20px 20px;
 }
-.progress-bars {
-  width: 42%;
-  position: relative;
-  top: -459px;
-  left: 126px;
+.wrappers h1 {
+    margin: 30px 0;
+    font-size: 42px;
 }
-.progress-bars progress {
-  margin: 48px;
-  width: 250px;
+.wrappers ul {
+    display: flex;
+    margin: 30px 40px 20px 20px;
 }
-.projects {
-  width: 48rem;
-  height: 33rem;
-  position: relative;
-  top: -975px;
-  left: 663px;
-  padding: 0px 0px 0px 20px;
+.wrappers ul li {
+    list-style: none;
+    margin: 0px 20px 0 20px;
+    padding: 20px 45px 20px 20px;
+    background: rgb(38, 36, 36);
+    border-radius: 20px;
+    transition: 0.5s;
 }
-.horizontal {
-  transform: rotate(90deg);
-  position: relative;
-  width: 500px;
-  top: -642px;
-  left: 340px;
+.wrappers span {
+    font-size: 30px;
 }
-.third {
-  padding: 30px 40px;
-  height: 20rem;
-  background-color: rgb(1, 1, 13);
+.wrappers ul li:hover {
+    transform: translateY(-10%);
+    background-color: rgb(206, 48, 48);
+}
+
+.last {
+    margin: 30px 40px 20px 20px;
+    padding: 20px 0 20px 57px;
+    height: 20rem;
+}
+.last .contact {
+    padding: 20px 45px 20px 20px;
+}
+.contact h1 {
+    font-size: 42px;
+}
+.contact ul {
+    margin: 20px 0 40px;
+    display: flex;
+}
+.contact ul li {
+    list-style: none;
+    font-size: 22px;
+    padding: 0 0 20px 20px;
+    color: #009688;
+}
+.contact ul li p{
+    padding: 0 20px 0 0 ;
+    color: white;
+}
+.contact ul li i {
+    color: white;
+    transition: 0.5s;
+    height: 80px;
+}
+.contact ul li i:hover {
+    transform: translateY(-10%);
+    color: red;
 }

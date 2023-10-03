@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   </head>
   <body>
     <header>
@@ -19,7 +22,8 @@
           <img src="c_logo.jpg" class="logo" />
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Languages</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
@@ -39,38 +43,84 @@
             <img src="main.png">
         </div>
       </section>
-      <hr>
-      <section class="second">
-        <h1>Languages</h1>
-        <span>What I have Learnt so far</span>
-        <div class="imgs">
-          <img src="python.png">
-          <img src="html.png">
-          <img src="css.png">
-          <img src="js.png">
+      <section class="secondsection">
+        <div class="left">
+          <img src="aboutimg.jpg" id="about_img">
         </div>
-        <div class="progress-bars">
-          <progress max="100" value="80"></progress>
-          <progress max="100" value="70"></progress>
-          <progress max="100" value="60"></progress>
-          <progress max="100" value="20"></progress>
-        </div>  
-        <hr class="horizontal">
-        <div class="projects">
-          <h1>Projects</h1>
-          <span>External Links for my projects</span>
-          <div class="update">
-            <h4>We ar still updating the the project</h4>
-            <progress></progress>
+        <div class="right">
+          <h1>About</h1>
+          <span>Hi, I am <i>Tariq</i>,<br> 
+            a passionate computer engineer, 
+            <br>
+            I have 2 years of experience in <i>python</i>,
+            <br>
+            I can develop Software, Android Applications, Web and Game...
+          </span>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="open_tab('skills')">Skills</p>
+            <p class="tab-links" onclick="open_tab('education')">Education</p>
+            <p class="tab-links" onclick="open_tab('experience')">Experience</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Software Development</span><br>Designing GUI</li>
+              <li><span>Web Development</span><br>Building Exclusive Websites with attractive features</li>
+              <li><span>Game Development</span><br>Building 2d Games with beautifull animation</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>BAF Shaheen English Medium School</span><br><i class="material-icons">directions</i> Tejgaon, Dhaka</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Experience</span><br>I have experience of 2 years in 
+                <br>
+                Software development and Game Development</li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="third">
-        <h1>Thanks for your time</h1>
-        <h4>still on update...</h4>
-        <progress></progress>
+      <section class="thirdsection">
+        <div class="wrappers">
+          <h1>My Services</h1>
+          <ul>
+            <li><span>Web Development</span><p>I am still learning in the web development,
+              <br> 
+              but I do have some experience, 
+              <br>
+              visit projects section for more..
+            </p></li>
+            <li><span>Software Development</span><p>I have 2 years of experience developing Software
+              <br>include GUI and various other application</p></li>
+              <li><span>Game Development</span><p>Besides Software Development,
+                <br> I also started learning games development</p></li>
+          </ul>
+          <ul>
+            <li><span>Video Editing</span><p>I started learning video editing 
+              <br>while learning Game Development, Now,
+              <br> I have Become a frequent user of 
+              <br>Premiere Pro and After Effects</p></li>
+          </ul>
+        </div>
       </section>
-    </main>
+      <section class="last">
+        <div class="contact">
+          <h1>Contact</h1>
+          <ul>
+            <li>Email : <p>tiaaf2011@gmail.com</p></li>
+            <li>Contact No. : <p>880+ 01717559007</p></li>
+          </ul>
+          <ul>
+            <li>Social Media : </li>
+            <li><i class='bx bxl-facebook-circle'></i></li>
+            <li><i class='bx bxl-whatsapp'></i></li>
+            <li><i class='bx bxl-messenger'></i></li>
+          </ul>
+        </div>
+      </section>
+
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
     <script>
@@ -78,12 +128,26 @@
         strings: [
           "<i>Software developer...</i>",
           "<i>Web developer...</i>",
-          "<i>Game Developer...</i>",
+          "<i>Digital Marketer...</i>",
           "<i>Video Editor...</i>",
-          "<i>Web Designer...</i>"
+          "<i>Game Developer...</i>"
         ],
         typeSpeed: 50,
       });
+    </script>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links")
+      var tabcontents = document.getElementsByClassName("tab-contents")
+
+      function open_tab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+      }
     </script>
   </body>
 </html>
