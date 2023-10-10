@@ -51,7 +51,8 @@ body {
 }
 .navbar ul li a {
   text-decoration: none;
-  color: white;
+  color: goldenrod;
+  text-shadow: 0 0 10px goldenrod;
 }
 .navbar ul li::after {
   content: "";
@@ -60,7 +61,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #009688;
+  background-color: goldenrod;
   transition: 0.5s;
 }
 .navbar ul li:hover::after {
@@ -91,11 +92,14 @@ body {
   padding: 30px 10px;
 }
 .leftsection i {
-  color: #009688;
+  color: goldenrod;
+  text-shadow: 0 0 15px goldenrod;
 }
 .leftsection .contact button {
   border-radius: 40px;
-  border: 2px solid #009688;
+  border: 2px solid goldenrod;
+  text-shadow: 0 0 15px goldenrod;
+  box-shadow: 0 0 25px goldenrod;
   background: transparent;
   color: white;
   width: 30%;
@@ -105,7 +109,7 @@ body {
   position: relative;
 }
 .leftsection .contact span {
-  background: #009688;
+  background: goldenrod;
   z-index: -1;
   height: 100%;
   width: 0;
@@ -138,6 +142,7 @@ body {
     margin: 30px 40px;
     animation-name: faderight;
     animation-duration: 0.5s;
+    box-shadow: 0 0 50px goldenrod;
 }
 .secondsection .right {
     flex-basis: 45%;
@@ -150,7 +155,8 @@ body {
     font-size: 42px;
 }
 .right i {
-    color: #009688;
+    color: goldenrod;
+    text-shadow: 0 0 15px goldenrod;
     font-size: 20px;
 }
 .right .tab-titles {
@@ -168,7 +174,7 @@ body {
     content: "";
     width: 0;
     height: 3px;
-    background: #009688;
+    background: goldenrod;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -183,7 +189,8 @@ body {
 
 }
 .tab-contents span {
-    color: red;
+    color: gold;
+    text-shadow: 0 0 20px goldenrod;
     font-size: 22px;
 }
 .tab-contents {
@@ -192,6 +199,11 @@ body {
 .tab-contents.active-tab {
     display: block;
 }
+#experience ul li i{
+  font-size: 40px;
+  margin: 5px 40px;
+}
+
 .thirdsection {
     height: 30rem;
     padding: 30px 40px;
@@ -221,7 +233,8 @@ body {
 }
 .wrappers ul li:hover {
     transform: translateY(-10%);
-    background-color: rgb(206, 48, 48);
+    background-color: goldenrod;
+    box-shadow: 0 0 50px goldenrod;
 }
 
 .last {
@@ -231,6 +244,7 @@ body {
 }
 .last .contact {
     padding: 20px 45px 20px 20px;
+    background: transparent;
 }
 .contact h1 {
     font-size: 42px;
@@ -238,23 +252,26 @@ body {
 .contact ul {
     margin: 20px 0 40px;
     display: flex;
+    text-shadow: 0 0 50px goldenrod;
 }
 .contact ul li {
     list-style: none;
     font-size: 22px;
     padding: 0 0 20px 20px;
-    color: #009688;
+    color: goldenrod;
 }
 .contact ul li p{
     padding: 0 20px 0 0 ;
     color: white;
+    text-shadow: 0 0 20px goldenrod;
 }
 .contact ul li i {
     color: white;
     transition: 0.5s;
-    height: 80px;
+    font-size: 50px;
 }
 .contact ul li i:hover {
-    transform: translateY(-10%);
-    color: red;
+    transform: translateY(-30%);
+    color: goldenrod;
+    text-shadow: 0 0 20px goldenrod;
 }
